@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- <h1>Rock Paper Scissors</h1> -->
+    <section class="lands">
+        <p> WIE VIEL RUNDE WILLST DU SPILEN?</p>
+
+
+        <form action="" id="show" onclick="manyRunde()">
+            <div class="radio1">
+                <input type="radio" id="funf" name="runde" value="5" checked>
+                <label for="">5</label>
+                <input type="radio" id="zehn" name="runde" value="10">
+                <label for="">10</label>
+            </div>
+            <div class="radio2">
+                <input type="radio" id="funfzehn" name="runde" value="15">
+                <label for="">15</label>
+                <input type="radio" id="zwanzig" name="runde" value="20">
+                <label for="">20</label>
+            </div>
+        </form>
+
+        <div id="rounds-result">
+            <p id="rounds-min">0</p>
+            <p>/</p>
+            <p id="rounds-max">0</p>
+        </div>
+        <div id="result">
+            <p id="user">0</p>
+            <p>:</p>
+            <p id="comp">0</p>
+        </div>
+        <div id="play">
+            <p id="let">Let's play</p>
+        </div>
+        <div id="bilder">
+            <img src="assets/img/1.png" id="scissors" alt="">
+            <img src="assets/img/2.png" id="paper" alt="">
+            <img src="assets/img/3.jpg" id="rock" alt="">
+
+        </div>
+        <p id="make">MAKE YOUR MOVE</p>
+        <p id="neustart" onclick="restart()">restart</p>
+    </section>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

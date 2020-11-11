@@ -1,0 +1,39 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.radio1,
+.radio2 {
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  font-size: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+
+  width: 30%;
+}
+.radio1 label:nth-of-type(1) {
+  margin-right: 30%;
+}
+.radio2 label:nth-of-type(1) {
+  margin-right: 27.5%;
+}
+#rounds-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: 3px solid black;
+  width: 10%;
+}
