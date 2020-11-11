@@ -147,7 +147,8 @@ valuee=0
           user.innerHTML = `${mUser * 1}`;
           comp.innerHTML = `${++mComp}`;
         //   rockSpan.style.borderColor = "red";
-          lett.innerHTML = `<p><b>Rock</b> VS <b>Paper</b> . <span style="color:red">You lose!</span></p>`;
+        //   lett.innerHTML = `<p><b>Rock</b> VS <b>Paper</b> . <span style="color:red">You lose!</span></p>`;
+        lett.innerHTML = `<p> ROCK <span>[user]</span> PAPER <span>[comp]</span></p> `
         } else if (x == 1) {
           user.innerHTML = `${++mUser}`;
           comp.innerHTML = `${++mComp}`;
