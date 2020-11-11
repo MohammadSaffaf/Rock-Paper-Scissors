@@ -5,67 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Almendra+Display&family=Cabin+Sketch&family=Merienda:wght@700&family=Rock+Salt&family=Ruslan+Display&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: white;
+        font-family: "Aclonica", sans-serif;
+        height: 7vh;
+        padding-top: 1%;
+        font-size: 4rem;
+
+    }
+</style>
 
 <body>
-
-    <!-- <h1>Rock Paper Scissors</h1> -->
-    <section class="lands">
-
-
-
-        <form action="" id="show" onclick="manyRunde()">
-            <p> WIE VIEL RUNDE WILLST DU SPILEN?</p>
-            <div class="radio1">
-                <input type="radio" id="funf" name="runde" value="5" checked>
-                <label for="">5</label>
-                <input type="radio" id="zehn" name="runde" value="10">
-                <label for="">10</label>
-            </div>
-            <div class="radio2">
-                <input type="radio" id="funfzehn" name="runde" value="15">
-                <label for="">15</label>
-                <input type="radio" id="zwanzig" name="runde" value="20">
-                <label for="">20</label>
-            </div>
-        </form>
-
-        <div id="rounds-result">
-            <p id="rounds-min">0</p>
-            <p>/</p>
-            <p id="rounds-max">0</p>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <div class="erstseite">
+            <a href="index2.html">SPILEN</a>
         </div>
-        <div id="result">
-            <h3>USER</h3>
-            <p id="user">0</p>
-            <p style="font-size: 5rem;">|</p>
-            <p id="comp">0</p>
-            <h3>COMP</h3>
-        </div>
-        <div id="play">
-            <p id="let" style="font-size: 30px;">Let's play</p>
-        </div>
-        <div id="bilder">
-            <img src="assets/img/1.png" id="scissors" alt="">
-            <img src="assets/img/2.png" id="paper" alt="">
-            <img src="assets/img/3.jpg" id="rock" alt="">
 
-        </div>
-        <p id="make">MAKE YOUR MOVE</p>
-        <button id="neustart" onclick="restart()">restart</button>
-        <!-- <footer>
-            <a href="index2.html">&#8656;BACK TO ROUNDS</a>
-        </footer> -->
-    </section>
-
-
-
-    <script src="assets/js/main.js"></script>
+    </header>
 </body>
 
 </html>
