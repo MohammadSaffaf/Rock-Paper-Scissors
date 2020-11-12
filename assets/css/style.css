@@ -18,7 +18,6 @@ header {
   animation: roll 15s infinite;
   transform: rotate(30deg);
 }
-
 @keyframes roll {
   0% {
     transform: rotatey(0);
@@ -27,14 +26,18 @@ header {
     transform: rotatey(360deg);
   }
 }
-
 header a {
   color: white;
-  text-decoration: none;
   font-size: 3rem;
   margin-left: 45%;
   margin-top: 5%;
   width: 100%;
+  transition: all 1s linear;
+}
+header a:hover {
+  color: red;
+  text-shadow: 2px 2px 8px #fff;
+  font-size: 3.2rem;
 }
 .body {
   background: no-repeat;
@@ -42,22 +45,16 @@ header a {
   color: white;
   font-family: "Merienda", cursive;
 }
-
 section {
-  /* margin-top: 5%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-
-  /* font-family: "Cabin Sketch", cursive; */
-  /* font-family: "Aclonica", sans-serif; */
 }
 .radio1,
 .radio2 {
   width: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,8 +67,8 @@ form {
   align-items: center;
   justify-content: center;
   border: 3px solid white;
-
-  width: 30%;
+  height: 20vh;
+  width: 60%;
 }
 .radio1 label:nth-of-type(1) {
   margin-right: 30%;
@@ -86,11 +83,11 @@ form {
   justify-content: center;
   justify-content: space-around;
   border: 3px solid white;
-  width: 10%;
+  width: 15%;
+  font-size: 2rem;
 }
 #result {
   display: flex;
-
   width: 30%;
   justify-content: space-around;
   align-items: baseline;
@@ -100,11 +97,13 @@ form {
   background-color: rgba(255, 0, 0, 0.7);
   padding: 5%;
   clip-path: circle();
+  font-size: 3rem;
 }
 #comp {
   background-color: rgba(255, 0, 0, 0.7);
   padding: 5%;
   clip-path: circle();
+  font-size: 3rem;
 }
 img {
   width: 20%;
@@ -117,7 +116,7 @@ img {
 #bilder {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
 }
 button {
   font-family: "Merienda", cursive;
@@ -125,10 +124,37 @@ button {
   margin-top: 2%;
   margin-bottom: 2%;
 }
-/* a {
-  margin-top: 10%;
-} */
+.zeischen {
+  font-size: 4rem;
+}
 img:hover {
   border: 5px solid lime;
   background-color: rgba(255, 255, 255, 0.3);
+}
+@media only screen and (max-width: 900px) {
+  form {
+    width: 100%;
+  }
+  section {
+    font-size: 1rem;
+  }
+  #rounds-result {
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .zeischen {
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .erstseite {
+    background-size: 90%;
+  }
+  header a {
+    font-size: 2rem;
+    margin-left: 36%;
+  }
+  img {
+    width: 25%;
+  }
 }

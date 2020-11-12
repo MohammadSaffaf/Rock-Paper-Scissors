@@ -23,7 +23,6 @@ valuee=0
     if (round5.checked) {
         valuee=5
         roundsMax.innerHTML=5
-        
     }else if (round10.checked) {
         valuee = 10;
         roundsMax.innerHTML=10
@@ -35,10 +34,7 @@ valuee=0
         roundsMax.innerHTML=20
       }
       return valuee;
-      
     }
-
-
     //scissors funktion
     scissors.addEventListener("click", () => {
         
@@ -57,14 +53,14 @@ valuee=0
         if (x == 0) {
           user.innerHTML = `${++mUser}`;
           comp.innerHTML = `${mComp * 1}`;
-        lett.innerHTML = `<p> SCISSORES<span>${name}</span> PAPER <span>[comp]</span> YOU WIN</p> `;
+        lett.innerHTML = `<p> SCISSORES<span>[user]</span> PAPER <span>[comp]</span> YOU WIN</p> `;
         } else if (x == 1) {
           user.innerHTML = `${mUser * 1}`;
           comp.innerHTML = `${++mComp}`;
         lett.innerHTML = `<p> SCISSORES<span>[user]</span> ROCK <span>[comp]</span> YOU LOSE</p> `;
         } else {
-          user.innerHTML = `${++mUser}`;
-          comp.innerHTML = `${++mComp}`;
+          user.innerHTML = `${mUser}`;
+          comp.innerHTML = `${mComp}`;
         lett.innerHTML = `<p>It was a DRAW. You both chose SCISSORES.</p>`
          }
        });
@@ -72,7 +68,6 @@ valuee=0
        rock.addEventListener("click", () => {
         roundsMax.innerHTML = manyRunde();
         x = Math.floor(Math.random() * 3);
-        console.log(x);
         ++mall;
         if (mall < manyRunde()) {
           roundMin.innerHTML = mall;
@@ -88,20 +83,20 @@ valuee=0
           comp.innerHTML = `${++mComp}`;
         lett.innerHTML = `<p> ROCK<span>[user]</span> PAPER <span>[comp]</span> YOU LOSE</p> `;
         } else if (x == 1) {
-          user.innerHTML = `${++mUser}`;
-          comp.innerHTML = `${++mComp}`;
+          user.innerHTML = `${mUser}`;
+          comp.innerHTML = `${mComp}`;
         lett.innerHTML = `<p>It was a DRAW. You both chose ROCK.</p>`
         } else {
           user.innerHTML = `${++mUser}`;
           comp.innerHTML = `${mComp * 1}`;
         lett.innerHTML = `<p> ROCK<span>[user]</span> SCISSORS <span>[comp]</span> YOU WIN</p> `;
         }
+        // endResult()
       });
       //Paper funktion
       paper.addEventListener("click", () => {
         roundsMax.innerHTML = manyRunde();
         x = Math.floor(Math.random() * 3);
-        console.log(x);
         ++mall;
         if (mall < manyRunde()) {
           roundMin.innerHTML = mall;
@@ -113,8 +108,8 @@ valuee=0
         endResult()
         }
         if (x == 0) {
-          user.innerHTML = `${mUser * 1}`;
-          comp.innerHTML = `${++mComp}`;
+          user.innerHTML = `${mUser}`;
+          comp.innerHTML = `${mComp}`;
         lett.innerHTML = `<p>It was a DRAW. You both chose PAPER.</p>`
         } else if (x == 1) {
           user.innerHTML = `${++mUser}`;
@@ -124,25 +119,27 @@ valuee=0
           user.innerHTML = `${++mUser}`;
           comp.innerHTML = `${mComp * 1}`
         lett.innerHTML = `<p> PAPER <span>[user]</span> SCISSORS <span>[comp]</span> YOU LOSE</p>`
+        // endResult()
         } 
       });
-
       function endResult() {
         if (user.innerHTML > comp.innerHTML) {
             section.style.backgroundImage="url('https://media2.giphy.com/media/jof1Ck9hcZIOlQyzDL/source.gif')"
-            
+            section.style.backgroundSize="100%"
           lett.innerHTML = '<p style="font-size: 60px; color: yellow; font-family: Cabin Sketch, cursive;">Congratulations! You win!</p>'
         } else if (user.innerHTML < comp.innerHTML) {
             section.style.backgroundImage="url('https://i.pinimg.com/originals/93/94/01/939401aab667fb28f7d9aaa5c8dc1a3a.gif')"
             section.style.backgroundRepeat="no-repeat"
             section.style.backgroundPosition="center bottom"
             section.style.height="100vh"
+            section.style.backgroundSize="20%"
           lett.innerHTML = '<p style="font-size: 60px; color: yellow; font-family: Cabin Sketch, cursive;">SOORY! You LOS!</p>';
         } else if ((user.innerHTML = comp.innerHTML)) {
             section.style.backgroundImage="url(https://media1.giphy.com/media/LqrvwdcH813d7vgUqZ/giphy.gif) "
             section.style.backgroundRepeat="no-repeat"
             section.style.backgroundPosition="center bottom"
             section.style.height="100vh"
+            section.style.backgroundSize="50%"
             lett.innerHTML = '<p style="font-size: 60px; color: yellow; font-family: Cabin Sketch, cursive;">IT IS DRAW! PLAY AGIN!</p>'
         }
         style.display = "block";
