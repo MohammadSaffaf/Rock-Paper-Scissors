@@ -15,7 +15,7 @@ let mUser = 0;
 let mComp = 0;
 let mall =0
 //runde funktion
-function manyRunde() {
+const manyRunde = () => {
  let round5 = document.getElementById("funf");
 let round10 = document.getElementById("zehn");
 let round15 = document.getElementById("funfzehn");
@@ -122,7 +122,7 @@ valuee=0
         // endResult()
         } 
       });
-      function endResult() {
+      const endResult = () => {
         if (user.innerHTML > comp.innerHTML) {
             section.style.backgroundImage="url('https://media2.giphy.com/media/jof1Ck9hcZIOlQyzDL/source.gif')"
             section.style.backgroundSize="100%"
